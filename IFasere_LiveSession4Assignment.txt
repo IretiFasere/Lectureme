@@ -1,0 +1,143 @@
+1a).
+## log of a positive number
+log2(200)
+[1] 7.643856
+
+
+1b).
+previous default log baseThe default base of the log function (general form) is e or natural logarithm. 
+
+## calculate previous log with a different base
+ log10(200)
+[1] 2.30103
+
+
+1c).
+## log of a negative number
+log(-4)
+[1] NaN
+Warning message:
+In log(-4) : NaNs produced
+# Nans produced means it is undefined. A log of negative number is not permissible.NaN stands for not a number.
+
+1d).
+## square root of a positive number
+
+sqrt(16)
+[1] 4
+
+
+2a).
+## create the vector of standard normal random variables. Calculate mean and sd.
+
+Janet.scores <- c(12, 8,3,56,45,98,23,56,78,12,45,67,89,34,56)
+## find the mean.
+mean.result <-mean(Janet.scores)
+print(mean.result)
+[1] 45.46667
+## find the sd.
+sd.result <-sd(Janet.scores)
+print(sd.result)
+[1] 29.99254
+
+2b).
+## Recalculate the vector of 15 random normal variables. Calculate mean and sd.
+
+rnorm(15,mean=10,sd=2)
+[1]  6.340861 10.046777  9.718379  8.851997 15.112914  8.072550  9.666393  6.807398  8.077534  8.715208 10.923509 13.418780  9.604781  8.643754  7.519252
+
+x<- rnorm(15,mean=10,sd=2)
+## find the mean.
+mean(x)
+[1] 9.98543
+##find the sd.
+ sd(x)
+[1] 2.245049
+
+
+2c)They are different because a small sample is drawn randomly from a normally distributed population. They will be closer to each other as the sample size increase.
+
+3a) weight <-c(60,72,57,90,95,72)
+
+ 
+
+3b) height<-c(1.80,1.85,1.72,1.90,1.74,1.91)
+
+3c) weight <-c(60,72,57,90,95,72)
+    height<-c(1.80,1.85,1.72,1.90,1.74,1.91)
+
+
+3d).
+## Create a scatterplot of weight vs height.
+
+weight <-c(60,72,57,90,95,72)
+height<-c(1.80,1.85,1.72,1.90,1.74,1.91)
+plot(weight,height,main="Weights & Heights of Six Individuals",xlab="Weights(kg)",ylab="Heights(m)")
+
+Interprete the satterplot:
+A relationship between weight and height, as the height Increase the weight also increase. With a sharp decline at weight 90kg and shrink in height to 1.74m at weight 95kg.
+
+
+3e).
+## Calculate the BMI for each Individuals.
+
+BMI(weight/((height)^2))
+[1] 18.51852 21.03725 19.26717 24.93075 31.37799 19.73630
+
+
+3f).
+## Mean for weight.
+
+mean(weight)
+[1] 74.33333
+
+
+3g).
+## Subtract mean from each weight.
+
+weight <-c(60,72,57,90,95,72)
+mean<-74.33333
+weight -74.33333
+[1] -14.33333  -2.33333 -17.33333  15.66667  20.66667  -2.33333
+
+
+3h).
+## Sum the result.
+
+sum(weight -74.33333)
+[1] 2e-05
+
+4.
+##  A data science profile as a data frame.
+
+Scale <-c(3,5,4,1,1,3,4)
+Proficiency <- c("computer programming","math", "statistics","machine learning", "domain expertise", "communication & presentation","data visualization")
+Ireti <- cbind(Scale,Proficiency)
+Ireti <-data.frame(Proficiency,Scale)
+print(Ireti)
+
+
+                   Proficiency Scale
+1         computer programming     3
+2                         math     5
+3                   statistics     4
+4             machine learning     1
+5             domain expertise     1
+6 communication & presentation     3
+7           data visualization     4
+
+
+##  A bar graph for data science profile.
+
+par(las=2)
+par(mar=c(5,8,4,2))
+barplot(Scale,main="Ireti Data Science Profile",ylab ="Scale", horiz=TRUE,xlab = "3 computer programming, 5 math,  4 statistics, 1 machine learning, 1 domain expertise, 3 communication & presentation, 4 data visualization")
+
+
+
+
+
+
+
+
+
